@@ -1,0 +1,30 @@
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>Calcular Promedio</mat-card-title>
+    </mat-card-header>
+    <br>
+    <mat-card-content>
+      <div class="flex-container">
+        <mat-form-field class="flex-item">
+          <mat-label>Nota 1:</mat-label>
+          <input matInput [(ngModel)]="frmProm.nota1" id="txtnota1">
+        </mat-form-field>
+        <mat-form-field class="flex-item">
+          <mat-label>Nota 2:</mat-label>
+          <input matInput [(ngModel)]="frmProm.nota2" id="txtnota2">
+        </mat-form-field>
+        <mat-form-field class="flex-item">
+          <mat-label>Nota 3:</mat-label>
+          <input matInput [(ngModel)]="frmProm.nota3" id="txtnota3">
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="calcularPROM()" class="flex-item">Calcular</button>
+        <mat-card *ngIf="resultado" class="resultado-card flex-item">
+          <mat-card-content>
+            {{resultado}}
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  
+  
