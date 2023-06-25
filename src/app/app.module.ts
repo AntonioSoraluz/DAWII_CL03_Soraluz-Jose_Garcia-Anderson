@@ -10,6 +10,7 @@ import { PromedioComponent } from './dashboard/promedio/promedio.component';
 import { RouterModule } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { BancoComponent } from './dashboard/banco/banco.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { BancoComponent } from './dashboard/banco/banco.component';
   imports: [
     BrowserModule,
     MaterialModule,
+    HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
     RouterModule.forRoot([
