@@ -9,6 +9,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { PromedioComponent } from './dashboard/promedio/promedio.component';
 import { RouterModule } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { BancoComponent } from './dashboard/banco/banco.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     DashboardComponent,
     PromedioComponent,
     PageNotFoundComponent,
+    BancoComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,7 +27,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     RouterModule.forRoot([
       {path: 'dashboard', component: DashboardComponent,
       children: [
-        {path: 'promedio', component: PromedioComponent}
+        {path: 'promedio', component: PromedioComponent},
+        {path: 'banco', component: BancoComponent}
       ]
     },
     {path: '', redirectTo: 'dashboard', pathMatch: 'full'},

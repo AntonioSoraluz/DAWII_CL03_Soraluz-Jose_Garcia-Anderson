@@ -14,4 +14,7 @@ export class DashboardComponent {
   irPaginaPromedio(): void{
     this.router.navigate(['promedio'], {relativeTo: this.route})
   }
+  irPaginaBanco(): void{
+    this.router.navigate(['banco'], {relativeTo: this.route})
+  }
 }
